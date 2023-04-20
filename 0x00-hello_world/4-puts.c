@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 /*
  * write a C program that prints a statement followed by a new line
  * return: 0
