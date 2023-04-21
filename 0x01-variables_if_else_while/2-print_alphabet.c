@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 /**
  * main - Prints the alphabet in lowercase
@@ -8,11 +6,11 @@
  */
 int main(void)
 {
-	int al;
+	char al = 'a';
 	
-	al = 'a';
 	while (al <= 'z')
-		putchar("%d\n", al);
+		putchar(al);
 		al++;
+	putchar('\n')
 	return (0);
 }
