@@ -10,9 +10,9 @@ int main(void)
 {
 	int al;
 	
-	al = 'a'
-	for (al = 'a'; al <= 'z'; al++)
-		putchar(al)
-		putchar('\n')
+	al = 'a';
+	for (al = 'a'; al <= 'z'; al++);
+		putchar(al);
+		putchar('\n');
 	return (0);
 }
