@@ -6,9 +6,10 @@
 int main(void)
 {
 	char al = 'a';
+
 	while (al <= 'z')
 	{
-		if (al != 'q' && al != 'e')
+		if (al !'q' && al !'e')
 		{
 			putchar(al);
 		}
