@@ -1,39 +1,28 @@
 #include <stdio.h>
 /**
- * main - Prints all the numbers of base 16 in lowercase
+ * main - Prints all possible different combinations of three digits
  *
  * Return: 0
  */
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-	int k = '0';
+	int d1, d2, d3;
 
-	while (i <= '7')
+	for (d1 = 0; d1 < 8; d1++)
 	{
-		while (j <= '8')
+		for (d2 = d1 + 1; d2 < 9; d2++)
 		{
-			while (k <= '9')
+			for (d3 = d2 + 1; d3 < 10; d3++)
 			{
-				if (i < j && j < k)
-				{
-					putchar(i);
-					putchar(i);
-					putchar(k);
-					if (i != j && j != k && i != k)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				k++;
+					putchar((d1 % 10) + '0');
+					putchar((d2 % 10) + '0');
+					putchar((d3 % 10) + '0');
+					if (d1 == 7 && d2 == 8 && d3 == 9)
+						continue;				
+				putchar(',');
+				putchar(' ');
 			}
-			k = '0';
-			j++;
 		}
-		j = '0';
-		i++;
 	}
 	putchar('\n');
 	return (0);
