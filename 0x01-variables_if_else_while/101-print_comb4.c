@@ -14,11 +14,11 @@ int main(void)
 		{
 			for (d3 = d2 + 1; d3 < 10; d3++)
 			{
-					putchar((d1 % 10) + '0');
-					putchar((d2 % 10) + '0');
-					putchar((d3 % 10) + '0');
-					if (d1 == 7 && d2 == 8 && d3 == 9)
-						continue;				
+				putchar((d1 % 10) + '0');
+				putchar((d2 % 10) + '0');
+				putchar((d3 % 10) + '0');
+				if (d1 == 7 && d2 == 8 && d3 == 9)
+					continue;
 				putchar(',');
 				putchar(' ');
 			}
