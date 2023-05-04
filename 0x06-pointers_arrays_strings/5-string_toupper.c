@@ -4,6 +4,7 @@
  * string_toupper - Function that changes all lowercase
  * letters of a string to uppercase
  * @strg: String
+ * Return: String
  */
 char *string_toupper(char *strg)
 {
