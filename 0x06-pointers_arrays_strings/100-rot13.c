@@ -15,7 +15,7 @@ char *rot13(char *s)
 
 	for (ind1 = 0; s[ind1] != '\0'; ind1++)
 	{
-		for (ind2 = 0; ind2 < 'R'; ind2++)
+		for (ind2 = 0; ind2 < 52; ind2++)
 		{
 			if (s[ind1] == strg[ind2])
 			{
