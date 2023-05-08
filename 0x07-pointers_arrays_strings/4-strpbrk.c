@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * _strpbrk - Function that searches a string for any of a set of bytes
  * @s: String with occurrence
@@ -19,5 +20,5 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	return (s);
+	return (NULL);
 }
