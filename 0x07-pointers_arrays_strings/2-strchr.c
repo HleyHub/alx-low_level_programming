@@ -4,7 +4,7 @@
  * _strchr - Function that locates a character in a string
  * @s: String
  * @c: Character in a string
- * Return: First occurrence of the character c in the string s, or NULL
+ * Return: NULL
  */
 char *_strchr(char *s, char c)
 {
