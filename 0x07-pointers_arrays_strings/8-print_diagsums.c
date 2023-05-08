@@ -16,7 +16,7 @@ void print_diagsums(int *a, int size)
 	}
 	for (ind = size - 1; ind >= 0; ind--)
 	{
-		sum_right = sum_right + a[ind * size + ind];
+		sum_right += a[ind * size + (size - ind - 1)];
 	}
 	printf("%d, %d\n", sum_left, sum_right);
 }
