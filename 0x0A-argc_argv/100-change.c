@@ -12,14 +12,14 @@
 int main(int argc, char *argv[])
 {
 	int ind, number, amount = 0;
-        int coin_val[] = {1, 2, 5, 10, 25};
+	int coin_val[] = {1, 2, 5, 10, 25};
 
-        if (argc != 2)
-        {
-                printf("Error\n");
-                return (1);
-        }
-        number = atoi(argv[1]);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	number = atoi(argv[1]);
 	if (number < 0)
 	{
 		printf("0\n");
