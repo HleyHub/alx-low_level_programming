@@ -11,8 +11,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int ind, number, amount = 0;
-	int coin_val[] = {1, 2, 5, 10, 25};
+	int ind, number;
+	int coin_val[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	number = atoi(argv[1]);
+	amount = 0;
 	if (number < 0)
 	{
 		printf("0\n");
@@ -30,7 +31,7 @@ int main(int argc, char *argv[])
 		while (number >= coin_val[ind])
 		{
 			amount++;
-			number -= coin_val[ind];
+			number = number - coin_val[ind];
 		}
 	}
 	printf("%d\n", amount);
