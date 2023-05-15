@@ -9,7 +9,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int ind1, strlgth1, strlgth2, size;
+	unsigned int ind1, ind2, strlgth1, strlgth2, size;
 	char *s3;
 
 	strlgth1 = strlen(s1);
@@ -32,9 +32,9 @@ char *str_concat(char *s1, char *s2)
 	{
 		s3[ind1] = s1[ind1];
 	}
-	for (ind1 = 0; ind1 < strlgth2; ind1++)
+	for (ind2 = 0; ind2 < strlgth2; ind2++)
 	{
-		s3[strlgth1 + ind1] = s2[ind1];
+		s3[ind1 + ind2] = s2[ind2];
 	}
 	s3[strlgth1 + strlgth2] = '\0';
 	return (s3);
