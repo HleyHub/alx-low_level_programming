@@ -10,6 +10,7 @@ char **strtow(char *str)
 {
 	int ind1 = 0, strlgth = 0, start_str, end_str, ind2;
 	char **words;
+
 	if (str == NULL || str[0] == '\0')
 	{
 		return (NULL);
