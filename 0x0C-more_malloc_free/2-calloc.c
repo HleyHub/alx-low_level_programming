@@ -9,7 +9,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int ind = 0, *arr;
+	unsigned int ind, *arr;
 
 	if (nmemb == 0 || size == 0)
 	{
@@ -22,6 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	else
 	{
+		ind = 0;
 		while (ind < nmemb * size)
 		{
 			arr[ind] = 0;
