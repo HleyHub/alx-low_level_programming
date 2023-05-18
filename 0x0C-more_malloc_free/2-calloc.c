@@ -4,13 +4,12 @@
 /**
  * _calloc - Function that allocates memory for an array, using malloc
  * @nmemb: Memory of array
- * @sise: Number of bytes
+ * @size: Number of bytes
  * Return: Pointer to the allocated memory or NULL if it fails
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int ind;
-	char *arr;
+	unsigned int ind, *arr;
 
 	if (nmemb == 0 || size == 0)
 	{
