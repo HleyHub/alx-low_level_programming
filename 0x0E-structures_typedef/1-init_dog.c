@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 /**
- * struct dog - Structure type
+ * init_dog - Structure type
  * @d: First type
  * @name: Second type
  * @age: Third type
