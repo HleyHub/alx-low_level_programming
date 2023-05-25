@@ -7,52 +7,41 @@
  */
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	unsigned int i, check_format, ind = 0;
-	char c, *string;
-	float f;
+	va_list lists;
+	int ind = 0;
+	char *string, *separator = "";
 
-	va_start(list, format);
-	while (format[ind])
+	va_start(lists, format);
+	if(format)
 	{
-		if (format[ind] == 'c')
+		
+		while (format[ind])
 		{
-			c = (char)va_arg(list, unsigned int);
-			printf("%c", c);
-			check_format = 1;
-		}
-		else if (format[ind] == 'i')
-		{
-			i = va_arg(list, unsigned int);
-			printf("%d", i);
-			check_format = 1;
-		}
-		else if (format[ind] == 'f')
-		{
-			f = (float)va_arg(list, double);
-			printf("%f", f);
-			check_format = 1;
-		}
-		else if (format[ind] == 's')
-		{
-			string = va_arg(list, char *);
-			if (string == NULL)
+			switch (format[ind])
 			{
-				printf("(nil)");
+				case 'c':
+					printf("%s%c", separator, va_arg(lists, int));
+					break;
+				case 'i':
+					printf("%s%d", separator, va_arg(lists, int));
+					break;
+				case 'f':
+					printf("%s%f", separator, va_arg(lists, double));
+					break;
+				case 's':
+					string = va_arg(lists, char *);
+					if (string == NULL)
+						printf("(nil)");
+					printf("%s%s", separator, string);
+					break;
+				default:
+					ind++;
+					continue;
 			}
-			else
-			{
-				printf("%s", string);
-			}
-			check_format = 1;
+			separator = ", ";
+			ind++;
 		}
-		if (format[ind + 1] != '\0' && check_format)
-		{
-			printf(", ");
-			check_format = 0;
-		}
-		ind++;
 	}
-	va_end(list);
+	va_end(lists);
 	printf("\n");
 }
