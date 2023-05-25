@@ -12,9 +12,8 @@ void print_all(const char * const format, ...)
 	char *string, *separator = "";
 
 	va_start(lists, format);
-	if(format)
+	if (format)
 	{
-		
 		while (format[ind])
 		{
 			switch (format[ind])
@@ -30,8 +29,8 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					string = va_arg(lists, char *);
-					if (string == NULL)
-						printf("(nil)");
+					if (!string)
+						string = "(nil)";
 					printf("%s%s", separator, string);
 					break;
 				default:
@@ -42,6 +41,6 @@ void print_all(const char * const format, ...)
 			ind++;
 		}
 	}
-	va_end(lists);
 	printf("\n");
+	va_end(lists);
 }
