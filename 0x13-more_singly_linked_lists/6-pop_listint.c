@@ -11,7 +11,7 @@ int pop_listint(listint_t **head)
 	listint_t *old = *head;
 	int new = (*old).n;
 
-	if (*head == NULL)
+	if (head == NULL || *head == NULL)
 		return (0);
 	*head = (**head).next;
 	free(old);
