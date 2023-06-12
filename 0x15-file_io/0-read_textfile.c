@@ -22,5 +22,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	write_byte = write(STDOUT_FILENO, BUFF, read_byte);
 	free(BUFF);
 	fclose(file);
-	return(write_byte);
+	return (write_byte);
 }
