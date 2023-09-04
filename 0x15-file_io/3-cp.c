@@ -46,9 +46,9 @@ int main(int argc, char *argv[])
 	if (to < 0 || a < 0)
 	{
 		if (to < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close file %d\n", rbyte);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", rbyte);
 		if (a < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close file %d\n", wbyte);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", wbyte);
 		exit(100);
 	}
 	return (0);
