@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int from, to, a, rbyte, wbyte;
-	char buffer[1024];
+	char buffer[BUFSIZ];
 
 	if (argc != 3)
 	{
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	wbyte = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	while ((from = read(rbyte, buffer, 1024)) > 0)
+	while ((from = read(rbyte, buffer, BUFSIZ)) > 0)
 	{
 		if (wbyte < 0 || write(wbyte, buffer, from) != from)
 		{
